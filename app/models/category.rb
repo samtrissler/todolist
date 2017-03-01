@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
 
-      validate :label, presence: true;
+      validates :label, presence: true
 
 end
