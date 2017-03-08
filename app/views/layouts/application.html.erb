@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Todolist</title>
+  <title>To Do List</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<%= yield %>
+
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<li><%= link_to("To Do List", :root, :class => "navbar-brand") %></li>
+
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><%= link_to("Tasks", tasks_path) %></li>
+<li><%= link_to("Categories", categories_path) %></li>
+
+
+</ul>
+</div>
+</div>
+
+</nav>
+
+
+<div class="container">
+<div class="row">
+
+
+
 
 </body>
+
+<blockquote class="blockquote-reverse">
+  <footer >copyright <cite title="copyright">Samantha Trissler</cite> CIT 436</footer>
+</blockquote>
 </html>
